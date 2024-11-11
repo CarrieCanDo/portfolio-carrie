@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+{
+	margin:0;
+	padding:0;
+	border-sizing: border-box;
+}
+
+/* this is my header */
+
+header {
+		background:rgba(0,51,102,1.00);
+		margin:0;
+		padding:0;
+				
+	}
+
+	h1 {
+		text-align: center;
+		color:white;
+		font:"marck-script";
+		margin:0;
+		padding-top:10px;
+		padding-bottom:5px;
+		font-size:50px;			
+		}
+
+
+/*this is my buttons*/
+nav {
+	display:flex;
+	background-color:rgba(239,239,239,1.00);
+	padding:0;
+}
+
+ul {
+	display:flex;
+	align-content: center;
+	padding:4px;
+	margin:3px;
+	}
+
+	ul li {
+    flex: auto;
+    align-self: center;
+    background-color:rgba(0,112,115,1.00);
+    padding-top: 6px;
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-bottom: 6px;
+    margin:3px;
+	cursor: pointer;
+    list-style: none;
+			}
+
+	ul li a{
+		color:white;
+		width:100%;
+		height:100%;
+	
+		}
+
+li:hover {background-color:lightsalmon;
+			color:white;
+}
+
+a:hover {text-decoration: underline;
+		color:white;
+}
+
+/*This is my body*/
+
+	body { 
+		
+		margin:0;;
+		background-size: cover;
+		font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+		color:darkblue;
+		}
+
+
+/* this is my section*/
+
+	section {
+		flex-direction:row;
+		display:flex;
+		padding:10px;
+		text-justify: auto;
+		background-color:chocolate;
+		}
+
+
+/*this is my div*/
+
+	div {
+    background-color: white;
+    margin-top: 63px;
+    margin-right: 26px;
+    margin-left: 26px;
+    margin-bottom: 64px;
+    padding: 2px;
+    font-size: 20px;
+    color: rgba(0,51,102,1.00);
+    flex: auto;
+    align-self: center;
+			}
+footer{
+		background-color:rgba(0,51,102,1.00);
+		color:white;
+		padding: 10px;
+	}
