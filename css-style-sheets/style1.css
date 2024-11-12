@@ -11,13 +11,19 @@ body {
     font-family: "Lora", serif;
     background-color: #fefaf6;
     color: #333;
+    scroll-behavior: smooth;
 }
 
-/* Header */
+/* Fixed Header */
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     text-align: center;
     padding: 20px 0;
     background-color: #4a5a72;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -37,38 +43,84 @@ nav ul {
 
 nav ul li a {
     color: #ffffff;
-    background-color: #6c7b8a;
+    background-color: #116dca;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 20px;
-    transition: background-color 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #5a6c7d;
+    background-color: #cc5000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Content */
-.content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
+/* Section Styling */
+section {
+    padding: 160px 20px 100px; /* Increased padding to allow for fixed header space */
     max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
+    margin: 0 auto;
 }
 
-/* Profile Section */
+/* Section Background Colors */
+.about {
+    background-color: #f9f9f9;
+}
+
+.portfolio {
+    background-color: #f2f4f8;
+}
+
+.resume {
+    background-color: #eaf3f3;
+}
+
+.contact {
+    background-color: #e8f0fe;
+}
+
+/* Section Headers */
+.about h2,
+.portfolio h2,
+.resume h2,
+.contact h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive; /* Ensures cursive font */
+    color: #147de7;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about {
+    background-color: #f9f9f9;
+}
+
+.about h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    color: #147de7;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
 .profile {
+    flex: 0 0 250px; /* Fixed width for profile section */
     background-color: #ffffff;
     border: 2px solid #e8e8e8;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
     text-align: center;
 }
+
 
 .profile img {
     border-radius: 8px;
@@ -82,50 +134,116 @@ nav ul li a:hover {
 }
 
 .profile .social-links a {
-    font-size: 24px;
-    color: #4a5a72;
+    font-size: 30px;
+    color: #116dca;
     margin: 0 10px;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .profile .social-links a:hover {
-    color: #cc5500; /* Accent color on hover */
+    color: #cc5000;
 }
 
-/* About Section */
-.about {
-    background-color: #ffffff;
-    border: 2px solid #e8e8e8;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
-
-.about h2 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 36px;
-    color: #4a5a72;
-    margin-bottom: 15px;
-}
-
-.about p {
-    font-size: 16px;
+.about-content p {
+    font-size: 18px;
     line-height: 1.6;
     color: #333;
-    margin-bottom: 15px;
+    max-width: 600px;
+    margin: 0;
 }
 
-/* Media Query for Tablets and Smaller Screens */
+/* Portfolio Section */
+.portfolio h2,
+.resume h2,
+.contact h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #147de7;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.portfolio .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.columns {
+    flex-basis: 30%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.columns img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.columns h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.columns p {
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+}
+
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact input, .contact textarea, .contact button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #116dca;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #cc5000;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    .content {
+    .about-content {
         flex-direction: column;
-        align-items: center;
-        padding: 10px;
     }
 
-    .profile, .about {
-        width: 100%;
+    .container {
+        flex-direction: column;
+    }
+
+    .columns {
+        flex-basis: 100%;
     }
 }

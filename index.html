@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio - Carrie Wright</title>
-	<link href="css-style-sheets/style1.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Carrie Wright</title>
+    <link href="css-style-sheets/style1.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
-	
-
 <body>
     <header>
         <h1>Carrie Wright</h1>
@@ -23,18 +21,51 @@
         </nav>
     </header>
 
-    <main class="content">
-        <section class="profile">
-            <img src="images/Carrie.jpg" alt="Carrie Wright" />
-            <div class="social-links">
-                <a href="https://github.com/CarrieCanDo" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/carrie-wright-a201132b7/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <main>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="profile">
+                    <img src="images/Carrie.jpg" alt="Carrie Wright" />
+                    <div class="social-links">
+                        <a href="https://github.com/CarrieCanDo" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/carrie-wright-a201132b7/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <p>Hello! I'm Carrie, a versatile professional with a diverse background in web development, instructional technology, and administration. With a recent education in full-stack development, I’ve gained hands-on experience in creating user-centered, responsive websites using HTML, CSS, JavaScript, and React. I am passionate about using technology to solve problems and improve user experiences, and I bring a detail-oriented approach to every project I undertake.</p>
+                <p>Prior to my journey in web development, I spent over a decade in administrative roles within the healthcare and educational sectors. During this time, I developed strong skills in project management, team collaboration, and adaptability—qualities that have enhanced my ability to work effectively in any environment. My experience includes everything from managing electronic health records to designing learning modules, which has given me a unique perspective on how technology can streamline processes and enhance learning.</p>
+                <p>I am driven by continuous learning and am always eager to take on new challenges, whether it is leading a team project, learning a new programming language, or volunteering in my community. As I continue to grow in the field of web development, I look forward to combining my technical skills with my background in communication and problem-solving to create impactful digital experiences</p>
             </div>
         </section>
-        <section class="about">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget tortor eget justo viverra aliquam. Sed sit amet venenatis purus. Fusce aliquam turpis sit amet felis feugiat, in facilisis odio bibendum.</p>
-            <p>Mauris et lectus non ligula sodales condimentum. Quisque vulputate justo vel leo malesuada, ut tempor elit congue. Nullam vehicula dolor ac justo gravida, at tincidunt ligula aliquet.</p>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <h2>Portfolio Projects</h2>
+            <p>Click on images to open documents and presentations.</p>
+            <div class="container">
+                <!-- Portfolio project items go here -->
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume">
+            <h2>Resume</h2>
+                <div class="container">
+                    <embed src="files/Resume Professional.pdf" type="application/pdf" width="100%" height="600px"/>
+                    </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <a href="#top" class="back-to-top">Back to Top</a>
         </section>
     </main>
 </body>
