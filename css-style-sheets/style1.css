@@ -58,27 +58,28 @@ nav ul li a:hover {
 
 /* Section Styling */
 section {
-    padding: 160px 20px 100px; /* Increased padding to allow for fixed header space */
-    max-width: 1000px;
+    padding: 160px 40px 100px; /* Increased padding to allow for fixed header space */
+    max-width: none;
+    width: 100%;
     margin: 0 auto;
 }
 
 /* Section Background Colors */
 .about {
-    background-color: #f9f9f9;
+    background-color: #f8fafa;
 }
 
 .portfolio {
-    background-color: #f2f4f8;
+    background-color: #faf0e9;
 }
 
 .resume {
-    background-color: #eaf3f3;
+    background-color: #89aaaa;
 }
 
 .contact {
-    background-color: #e8f0fe;
-}
+    background-color: #dadbcd;
+} 
 
 /* Section Headers */
 .about h2,
@@ -93,9 +94,6 @@ section {
 }
 
 /* About Section */
-.about {
-    background-color: #f9f9f9;
-}
 
 .about h2 {
     font-family: 'Dancing Script', cursive;
@@ -155,7 +153,6 @@ section {
 
 /* Portfolio Section */
 .portfolio h2,
-.resume h2,
 .contact h2 {
     text-align: center;
     font-family: 'Dancing Script', cursive;
@@ -167,8 +164,8 @@ section {
 .portfolio .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    gap: 30px;
+    justify-content: space-evenly;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -178,7 +175,7 @@ section {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -200,6 +197,19 @@ section {
     color: #333;
     padding: 10px;
 }
+
+/*Resume Section*/
+#resume h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+#resume, #contact, #portfolio {
+    padding-top: 40px; /* Reduce this to decrease space above the header */
+}
+
 
 /* Contact Form */
 .contact form {
@@ -233,9 +243,10 @@ section {
     background-color: #cc5000;
 }
 
+
+
 .portfolio {
-    background-color: #f2f4f8;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
 .portfolio h2 {
@@ -243,7 +254,7 @@ section {
     font-family: 'Dancing Script', cursive;
     color: #147de7;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .container {
@@ -258,16 +269,24 @@ section {
 .project-card {
     background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px;
+    width: 100%; /* Ensure consistent width */
+    max-width: 400px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Ensures the iframe fits inside the card */
+}
+
+.project-card iframe {
+    width: 100%; /* Adjust to fit card width */
+    height: 250px; /* Modify based on preferred aspect ratio */
+    border: none;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h3 {
@@ -286,7 +305,10 @@ section {
 }
 
 .project-description {
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    text-align: left;
+    line-height: 1.5;
     color: #333;
     margin-bottom: 15px;
 }
@@ -303,6 +325,15 @@ section {
     color: #cc5000;
 }
 
+/*contact background*/
+#contact {
+    background: linear-gradient(to bottom, #A8D5BA, #FCE8DE);
+    background-image: url('path-to-pattern.png'); /* Add texture */
+    background-size: cover;
+}
+
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -316,5 +347,12 @@ section {
 
     .columns {
         flex-basis: 100%;
+    }
+    .portfolio .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card {
+        max-width: 90%;
     }
 }
