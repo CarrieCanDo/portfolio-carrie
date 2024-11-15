@@ -110,13 +110,33 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <h2>Contact Me</h2>
-            <form>
+            <form id="contact-form" onsubmit="sendEmail(event)">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send</button>
             </form>
         </section>
-    </main>
+        
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function() {
+                emailjs.init("SQzhd1slrz7z-dUuW"); // Your actual User ID
+            })();
+        
+            // Function to handle form submission
+            function sendEmail(event) {
+                event.preventDefault(); // Prevent default form submission
+        
+                emailjs.sendForm("service_a3vcgms", "template_8go33ft", "#contact-form")
+                    .then(function(response) {
+                        alert("Message sent successfully!");
+                    }, function(error) {
+                        alert("Failed to send message: " + error.text);
+                    });
+            }
+        </script>
+        
+
 </body>
 </html>
