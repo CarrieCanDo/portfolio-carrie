@@ -1,2 +1,4 @@
 # portfolio-carrie
 Portfolio 2024
+
+This is my portfolio I created in late 2024 using HTML, CSS, and a little Javascript. It consists of some projects I created during my 6-months in a Full Stack Web Development with Stiegler EdTech along with some projects I created while attending UNC-Wilmington in the Masters of Instructional Technology program where I graduated with honors. I am highly interested in UI/UX and graphic design, and plan to continue along that course of learning. I will date creations as I go to show my progress over time. Thanks for taking the time to look at my portfolio, and feel free to contact me.  
