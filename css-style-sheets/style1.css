@@ -315,6 +315,7 @@ section {
 
 .project-link {
     color: #116dca;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     font-weight: bold;
     margin: 0 10px;
