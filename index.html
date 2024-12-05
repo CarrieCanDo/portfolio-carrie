@@ -12,6 +12,7 @@
 </head>
 <body>
     <header>
+        <div class="header-container">
         <h1>Carrie Wright</h1>
         <nav>
             <ul>
@@ -19,39 +20,61 @@
                 <li class="dropdown">
                     <a href="#portfolio" class="dropbtn">Portfolio</a>
                 <div class="dropdown-content">
-                    <a href="https://carriecando.github.io/articulate/">Articulate Projects</a>
-                    <a href="#illustrator">Illustrator Projects</a>
+                    <a href="articulate-projects">Articulate Projects</a>
+                    <a href="#illustrator-projects">Illustrator Projects</a>
                     <a href="#coding-projects">Coding Projects</a>
-                    <a href="#powerpoint">PowerPoint</a>
+                    <a href="#powerpoint">Fun with PowerPoint</a>
                     <a href="#photoshop">Photoshop</a>
                 </div></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+    </div>
     </header>
 
     <main>
         <!-- About Section -->
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="profile">
-                    <img src="images/Carrie.jpg" alt="Carrie Wright" />
-                    <div class="social-links">
-                        <a href="https://github.com/CarrieCanDo" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/carrie-wright-a201132b7/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <p>Hello! I'm Carrie, a versatile professional with a diverse background in web development, instructional technology, and administration. With a recent education in full-stack development, I have gained hands-on experience in creating user-centered, responsive websites using HTML, CSS, JavaScript, and React. I am passionate about using technology to solve problems and improve user experiences, and I bring a detail-oriented approach to every project I undertake.</p>
-                <p>Prior to my journey in web development, I spent over a decade in administrative roles within the healthcare and educational sectors. During this time, I developed strong skills in project management, team collaboration, and adaptability—qualities that have enhanced my ability to work effectively in any environment. My experience includes everything from managing electronic health records to designing learning modules, which has given me a unique perspective on how technology can streamline processes and enhance learning.</p>
-                <p>I am driven by continuous learning and am always eager to take on new challenges, whether it is leading a team project, learning a new programming language, or volunteering in my community. As I continue to grow in the field of web development, I look forward to combining my technical skills with my background in communication and problem-solving to create impactful digital experiences</p>
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+        <div class="profile">
+            <img src="images/Carrie.jpg" alt="Carrie Wright" />
+            <div class="social-links">
+                <a href="https://github.com/CarrieCanDo" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/carrie-wright-a201132b7/" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
-        </section>
+        </div>
+        <div class="about-text">
+            <p id="intro-paragraph">
+                Hello! I'm Carrie, a versatile professional with a diverse background in web development, instructional technology, and administration. With a recent education in full-stack development, I have gained hands-on experience in creating user-centered, responsive websites using HTML, CSS, JavaScript, and React. I am passionate about using technology to solve problems and improve user experiences, and I bring a detail-oriented approach to every project I undertake.
+            </p>
+            <div id="read-more-content" style="display: none;">
+                <p>
+                    Prior to my journey in web development, I spent over a decade in administrative roles within the healthcare and educational sectors. During this time, I developed strong skills in project management, team collaboration, and adaptability—qualities that have enhanced my ability to work effectively in any environment. My experience includes everything from managing electronic health records to designing learning modules, which has given me a unique perspective on how technology can streamline processes and enhance learning.
+                </p>
+                <p>
+                    I am driven by continuous learning and am always eager to take on new challenges, whether it is leading a team project, learning a new programming language, or volunteering in my community. As I continue to grow in the field of web development, I look forward to combining my technical skills with my background in communication and problem-solving to create impactful digital experiences.
+                </p>
+            </div>
+            <div class="button-container">
+                <button id="read-more-btn" onclick="toggleReadMore()">Read More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
 
         <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio">
-            <h2>Portfolio Projects 2024</h2>
+            <h2>My Portfolio</h2>
+            <p class="portfolio-intro">
+        Welcome to my Portfolio! Here, you will find a collection of my work across various projects, 
+        showcasing my skills in web development, design, and instructional technology. Feel free 
+        to explore each section to see the details of my projects.
+            </p>
+            
+            <h2>Coding Projects</h2>
 
             <div class="container">
                 <div class="project-card">
@@ -120,6 +143,62 @@
             </div>
         </section>
 
+<!-- Articulate Projects -->
+ <section id="articulate-projects" class="portfolio">
+    <h2>Articulate Projects</h2>
+    <div class="container">
+
+        <div class="project-card">
+            <h3>Under Construction</h3>
+            <iframe></iframe>
+            <p>This is under construction.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Under Construction</h3>
+            <iframe></iframe>
+            <p>This is under construction.</p>
+        </div>
+
+        <div class="container">
+            <div class="project-card">
+                <h3>Under Construction</h3>
+                <iframe></iframe>
+                <p>This is under construction.</p>
+            </div>
+        </div>
+
+    </div>
+ </section>
+
+ <!-- Illustrator Projects -->
+ <section id="articulate-projects" class="portfolio">
+    <h2>Illustrator Projects</h2>
+    <div class="container">
+
+        <div class="project-card">
+            <h3>Under Construction</h3>
+            <iframe></iframe>
+            <p>This is under construction.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Under Construction</h3>
+            <iframe></iframe>
+            <p>This is under construction.</p>
+        </div>
+
+        <div class="container">
+            <div class="project-card">
+                <h3>Under Construction</h3>
+                <iframe></iframe>
+                <p>This is under construction.</p>
+            </div>
+        </div>
+
+    </div>
+ </section>
+
 <!-- Resume Section -->
 <section id="resume" class="resume">
     <h2>Resume</h2>
@@ -173,6 +252,21 @@
                     });
             }
         </script>
+        
+        <script>
+            function toggleReadMore() {
+                const content = document.getElementById("read-more-content");
+                const button = document.getElementById("read-more-btn");
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                    button.textContent = "Read Less";
+                } else {
+                    content.style.display = "none";
+                    button.textContent = "Read More";
+                }
+            }
+        </script>
+        
         
 
 </body>
