@@ -14,6 +14,23 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Offset sections to account for the fixed header */
+section {
+    padding-top: 100px; /* Adjust this based on your header's height */
+}
+
+header {
+    height: auto; /* Ensures header takes its natural height */
+}
+
+html {
+    scroll-padding-top: 100px; /* Matches the header height */
+}
+
+#about {
+    padding-top: 150px; /* Adjust to match the header height */
+}
+
 /* Fixed Header */
 header {
     position: fixed;
@@ -33,12 +50,18 @@ header h1 {
 }
 
 /* Navigation */
+/* Dropdown Styles */
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 15px;
-    margin-top: 15px;
+    padding: 0;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
 }
 
 nav ul li a {
@@ -47,21 +70,58 @@ nav ul li a {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Lora', serif;
 }
 
 nav ul li a:hover {
     background-color: #cc5000;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Section Styling */
-section {
-    padding: 160px 40px 100px; /* Increased padding to allow for fixed header space */
-    max-width: none;
-    width: 100%;
-    margin: 0 auto;
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the main link */
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Lora', serif;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Header Styling */
+header {
+    background-color: #4a5a72;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Section Background Colors */
