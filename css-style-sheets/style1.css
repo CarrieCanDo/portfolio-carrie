@@ -9,7 +9,7 @@
 /* Body Styling */
 body {
     font-family: "Lora", serif;
-    background-color: #fefaf6;
+    background-color: #4a5a72;;
     color: #333;
     scroll-behavior: smooth;
 }
@@ -186,7 +186,7 @@ header {
 .about-content {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 30px;
     padding: 20px;
 }
 .about-text {
@@ -525,4 +525,14 @@ nav ul {
     .project-card {
         max-width: 90%;
     }
+}
+/* Add space at the bottom of Resume and Contact sections */
+#resume, #contact {
+    padding-bottom: 40px; /* Adjust value as needed for more space */
+    margin-bottom: 20px;  /* Additional spacing if required */
+}
+
+/* Ensure consistent spacing for all sections */
+section {
+    margin-bottom: 15px; /* Space between sections */
 }
